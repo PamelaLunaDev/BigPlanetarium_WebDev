@@ -1,0 +1,151 @@
+<!DOCTYPE html> <!-- Defines that the document uses HTML5. -->
+<html lang="en"> <!-- Sets the main language to English. -->
+
+  <head> <!-- Page settings area. -->
+    <meta charset="UTF-8"> <!-- Allows accents and special characters to display correctly. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page work well on mobile and tablet. -->
+    <title>Big Planetarium | Quiz and Video</title> <!-- Name shown in the browser tab. -->
+    <link rel="stylesheet" href="style.css"> <!-- Connects the CSS responsible for the page design. -->
+  </head>
+
+  <body> <!-- Everything visible to the user. -->
+
+    <a class="skip-link" href="#main-content">Skip to main content</a> <!-- Accessibility link to skip directly to the content. -->
+
+    <header class="site-header"> <!-- Page header. -->
+      <div class="container header-layout"> <!-- Centers and organizes the header content. -->
+      
+        <div class="branding"> <!-- Area with site name and identity. -->
+          <p class="eyebrow">BIG PLANETARIUM</p> <!-- Small text above the title. -->
+          <h1>Quiz and Video</h1> <!-- Main page title. -->
+          <p class="tagline">Learn in an easy and fun way.</p> <!-- Short description. -->
+        </div>
+
+        <nav aria-label="Main navigation"> <!-- Main menu, with accessibility. -->
+          <ul class="nav-list"> <!-- List of links. -->
+            <li><a href="index.html">Home</a></li> <!-- Link to home page. -->
+            <li><a href="mars.html">Mars</a></li> <!-- Link to Mars page. -->
+            <li><a href="moon.html">Moon</a></li> <!-- Link to Moon page. -->
+            <li><a href="visit.html" aria-current="page">Quiz & Video</a></li> <!-- Current page. -->
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main id="main-content"> <!-- Main page content. -->
+
+      <section class="content-section content-section-soft"> <!-- Video section.  -->
+        <div class="container"> <!-- Centers content. -->
+        
+          <div class="section-heading"> <!-- Section title area. -->
+            <p class="section-label">VIDEO</p> <!-- Label. -->
+            <h2>Watch and learn</h2> <!-- Title. -->
+          </div>
+
+          <p>
+            Watch the video and understand the Solar System in a simple way.
+          </p> <!-- Video explanation. -->
+
+          <div class="video-wrapper"> <!-- Box that keeps the video responsive. -->
+            <!-- YouTube video link, with accessibility description and video permissions. -->
+            <iframe
+              src="https://www.youtube.com/embed/ya6Ko9bF5v8"
+              title="Educational video about the Solar System"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen> <!-- Allows fullscreen. -->
+            </iframe>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="content-section"> <!-- Quiz section. -->
+        <div class="container"> <!-- Centers content. -->
+        
+          <div class="section-heading"> <!-- Section title. -->
+            <p class="section-label">QUIZ</p> <!-- Label. -->
+            <h2>Space quiz</h2> <!-- Title. -->
+          </div>
+
+          <p class="section-intro">
+            Answer all six questions. Then press the button to see your score and feedback.
+          </p> <!-- Instructions for the user. -->
+
+          <form id="quiz-form" class="quiz-form"> <!-- Quiz form, controlled by JavaScript. -->
+            <div id="quiz-container"></div> <!-- JavaScript will automatically insert the questions here. -->
+            <div class="quiz-actions"> <!-- Button area. -->
+              <button type="button" id="submit-quiz" class="button">Check my answers</button> <!-- Button to check answers. -->
+              <button type="button" id="reset-quiz" class="button button-outline">Try again</button> <!-- Button to restart. -->
+            </div>
+            <div id="quiz-result" class="quiz-result" aria-live="polite"></div> <!-- Area where the quiz result appears. -->
+          </form>
+
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- Memory game section. -->
+        <div class="container"> <!-- Centers content. -->
+
+          <div class="section-heading"> <!-- Section title. -->
+            <p class="section-label">MEMORY GAME</p> <!-- Label. -->
+            <h2>Space memory game</h2> <!-- Title. -->
+          </div>
+
+          <p class="section-intro">
+            Match the space objects by finding two equal cards.
+          </p> <!-- Instructions for the user. -->
+
+          <div id="memory-game" class="memory-game"></div> <!-- JavaScript will create the cards here. -->
+
+          <div class="quiz-actions"> <!-- Button area. -->
+            <button type="button" id="reset-memory" class="button button-outline">Restart memory game</button> <!-- Button to restart the game. -->
+          </div>
+
+          <p id="memory-message" class="quiz-result" aria-live="polite"></p> <!-- Message shown when the user wins. -->
+
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- Extra section. -->
+        <div class="container"> <!-- Centers. -->
+    
+          <div class="two-column"> <!-- Splits into two columns. -->
+            <div class="text-panel"> <!-- Text column. -->
+              <p class="section-label">PLANET FACTS</p> <!-- Label. -->
+              <h2>Interesting facts about planets</h2> <!-- Title. -->
+              <p>
+                Every planet in our Solar System is different. Some are small and rocky, while others
+                are large gas giants with many moons and rings.
+              </p> <!-- Explanation. -->
+              <p>
+                Studying planets helps us understand how space works, how worlds are formed, and why
+                Earth is such a special place for life.
+              </p> <!-- Explanation. -->
+            </div>
+
+            <aside class="info-panel"> <!-- Side box with summary. -->
+              <h3>Quick planet curiosities</h3> <!-- Title. -->
+              <ul class="styled-list"> <!-- List. -->
+                <li>Mercury is the closest planet to the Sun.</li> <!-- Item. -->
+                <li>Venus is the hottest planet in the Solar System.</li>
+                <li>Earth is the only known planet with life.</li>
+                <li>Jupiter is the largest planet in the Solar System.</li>
+              </ul>
+            </aside>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer"> <!-- Footer. -->
+      <div class="container"> <!-- Centers. -->
+        <p>&copy; 2026 Big Planetarium.</p> <!-- Final text. -->
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script> <!-- Connects JavaScript and ensures it loads after the HTML. -->
+  </body>
+</html>

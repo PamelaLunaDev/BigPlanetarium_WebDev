@@ -1,0 +1,171 @@
+<!DOCTYPE html> <!-- Tells the browser that this file uses HTML5, the current version of HTML. -->
+<html lang="en"> <!-- Defines that the main language of the page is English, this helps screen readers and search engines. -->
+  <head> <!-- Page settings section, not directly visible in the content. -->
+    <meta charset="UTF-8"> <!-- Allows letters, accents and symbols to be displayed correctly. --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page adjust well on mobile, tablet and desktop. -->
+    <title>Big Planetarium | The Moon</title> <!-- Text shown in the browser tab. -->
+    <link rel="stylesheet" href="style.css"> <!-- Connects the CSS file, which controls colors, sizes and layout. -->
+  </head>
+
+  <body> <!-- Everything inside the body appears to the user. -->
+
+    <a href="#main-content" class="skip-link">Skip to content</a> <!-- Accessibility link that allows skipping directly to the main content. -->
+
+    <header class="site-header"> <!-- Page header. -->
+      <div class="container header-layout"> <!-- Container that centers and organizes the header content. -->
+    
+        <div class="branding"> <!-- Area that shows the site name and identity. -->
+          <p class="eyebrow">BIG PLANETARIUM</p> <!-- Small text above the main title. -->
+          <h1>The Moon</h1> <!-- Main title of this page. -->
+          <p class="tagline">Discover fascinating facts and learn how the Moon shapes our world.</p> <!-- Short sentence explaining the page focus. -->
+        </div>
+
+        <nav aria-label="Main navigation"> <!-- Main site menu, aria-label helps screen readers understand this is navigation. -->
+          <ul class="nav-list"> <!-- List that holds the menu links. -->
+            <li><a href="index.html">Home</a></li> <!-- Link to return to the home page. -->
+            <li><a href="mars.html">Mars</a></li> <!-- Link to the Mars page. -->
+            <li><a href="moon.html" aria-current="page">Moon</a></li> <!-- Link to the Moon page. -->
+            <li><a href="visit.html">Quiz & Video</a></li> <!-- Link to the quiz and video page. -->
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main id="main-content"> <!-- Main content of the page, the id is used by the accessibility link above. -->
+
+      <section class="page-banner"> <!-- First highlighted section of the page. --> 
+        <div class="container page-banner-layout"> <!-- Container that organizes text and image side by side. -->
+
+          <div> <!-- Area where the main text is. -->
+            <h2>Our natural satellite</h2> <!-- Main title of the section. -->
+            <p>
+              The Moon is Earth's only natural satellite and one of the most important objects in our sky.
+              It influences tides, stabilises our planet and has inspired science, culture and exploration.
+            </p> <!-- Introductory text explaining why the Moon is important. -->
+          </div>
+
+          <div class="banner-planet"> <!-- Visual container that holds the main image. -->
+            <img src="Planets/Moon.png" alt="Detailed view of the Moon surface"> <!-- Moon image, alt describes it for accessibility. -->
+          </div>
+
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- New section with different background to separate content. -->   
+        <div class="container"> <!-- Centers the content inside the section. -->     
+          <div class="two-column"> <!-- Splits the content into two columns. -->
+
+            <div class="text-panel"> <!-- Text panel. -->
+              <p class="section-label">OBSERVATION</p> <!-- Small section label. -->
+              <h2>The Moon from Earth</h2> <!-- Block title. -->
+              <p>
+                From Earth, the Moon appears bright because it reflects sunlight.
+                Its surface is covered with craters, mountains and plains formed over billions of years.
+              </p> <!-- Explains why the Moon shines and what its surface is like. -->
+              <p>
+                The different shapes we see are called phases, such as full Moon, half Moon and crescent.
+              </p> <!-- Explains Moon phases. -->
+            </div>
+
+            <div class="hero-visual-card"> <!-- Container for the second image. -->
+              <img src="Planets/TheMoon.png" alt="Full Moon above Earth atmosphere"> <!-- Another image of the Moon from Earth. -->
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section"> <!-- Section with quick facts. -->
+        <div class="container"> <!-- Centers the content. -->
+          <h2 class="section-heading">Amazing Moon facts</h2> <!-- Section title. -->
+          <div class="fact-grid"> <!-- Grid that organizes fact cards. -->
+
+            <div class="fact-card"> <!-- First card. -->
+              <h3>Distance</h3> <!-- Fact title. -->
+              <p>The Moon is about 384,400 km away from Earth.</p> <!-- Distance information. -->
+            </div>
+
+            <div class="fact-card"> <!-- Second card. -->
+              <h3>Tides</h3> <!-- Fact title. -->
+              <p>The Moon’s gravity pulls Earth's oceans, creating tides.</p> <!-- Explains tides. -->
+            </div>
+
+            <div class="fact-card"> <!-- Third card. -->
+              <h3>Phases</h3> <!-- Fact title. -->
+              <p>The Moon goes through 8 phases in a cycle of about 29.5 days.</p> <!-- Explains lunar cycle. -->
+            </div>
+
+            <div class="fact-card"> <!-- Fourth card. -->
+              <h3>Exploration</h3> <!-- Fact title. -->
+              <p>Humans first landed on the Moon in 1969 during Apollo 11.</p> <!-- Historical information. -->
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- Section with different background to highlight content. -->
+        <div class="container"> <!-- Centers everything. -->
+          <div class="two-column"> <!-- Splits the section into two parts. -->
+
+            <div class="text-panel"> <!-- Text column. -->
+              <p class="section-label">LEARNING</p> <!-- Small label. -->
+              <h2>Why the Moon is important</h2> <!-- Section title. -->
+              <p>
+                The Moon helps stabilise Earth’s rotation, which keeps our climate more stable over time.
+              </p> <!-- Explains why the Moon helps Earth. -->
+              <p>
+                Without the Moon, days and seasons could change dramatically, making life much harder.
+              </p> <!-- Shows importance of the Moon for life. -->
+            </div>
+
+            <aside class="info-panel"> <!-- Side box with quick summary. -->
+              <h3>What you learned</h3> <!-- Box title. -->
+              <ul class="styled-list"> <!-- Review list. -->
+                <li>The Moon affects ocean tides</li> <!-- Summary 1 -->
+                <li>It has phases based on sunlight</li> <!-- Summary 2 -->
+                <li>It keeps Earth stable</li> <!-- Summary 3 -->
+                <li>It has been explored by humans</li> <!-- Summary 4 -->
+              </ul>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="content-section"> <!-- Final section with a different call focused on exploration. -->
+        <div class="container">
+
+          <div class="cta-box"> <!-- Highlighted visual box. -->
+            <div>
+              <p class="section-label">KEEP EXPLORING</p> <!-- Section label. -->
+              <h2>Want to discover more about space?</h2> <!-- More exploratory title. -->
+              <p>
+                You’ve learned about the Moon. Now continue your journey and explore other
+                planets, watch videos and test your knowledge with our interactive quiz.
+              </p> <!-- Text connecting learning with next action. -->
+            </div>
+
+            <div class="button-group"> <!-- Two buttons to give options. -->
+              <a href="mars.html" class="button">Explore Mars</a> <!-- Continue exploring. -->
+              <a href="visit.html" class="button button-outline">Try the quiz</a> <!-- Go to the quiz. -->
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="site-footer"> <!-- Page footer. -->
+      <div class="container"> <!-- Centers footer content. -->
+        <p>&copy; 2026 Big Planetarium.</p> <!-- Final text with rights and site name. -->
+      </div>
+    </footer>
+
+  </body>
+</html>

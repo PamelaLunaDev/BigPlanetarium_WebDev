@@ -1,0 +1,244 @@
+<!DOCTYPE html> <!-- Tells the browser that this file uses HTML5. -->
+<html lang="en"> <!-- Start of the HTML document, with English as the main language. -->
+  <head> <!-- Configuration section of the page, not directly visible in the content. -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to properly display accents and symbols. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on mobile and tablets. -->
+    <title>Big Planetarium | Home</title> <!-- Title that appears in the browser tab. -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the CSS file to style the page. -->
+  </head>
+
+  <body> <!-- Start of the visible content of the page. -->
+
+    <a href="#main-content" class="skip-link">Skip to content</a> <!-- Accessibility link to jump directly to the main content. -->
+
+    <header class="site-header"> <!-- Main header of the website. -->
+      <div class="container header-layout"> <!-- Container that organizes the header content. -->
+
+        <div class="branding"> <!-- Area with the site name and identity. -->
+          <p class="eyebrow">BIG PLANETARIUM</p> <!-- Small text above the main title. -->
+          <h1>Explore the Milky Way</h1> <!-- Main title of the page. -->
+          <p class="tagline">Journey through stars, planets, and the mysteries of space.</p> <!-- Short sentence explaining the purpose of the site. -->
+        </div>
+
+        <nav aria-label="Main navigation"> <!-- Main navigation menu. -->
+          <ul class="nav-list"> <!-- List of menu links. -->
+            <li><a href="index.html" aria-current="page">Home</a></li> <!-- Link to the home page, marked as current page. -->
+            <li><a href="mars.html">Mars</a></li> <!-- Link to the Mars page. -->
+            <li><a href="moon.html">Moon</a></li> <!-- Link to the Moon page. -->
+            <li><a href="visit.html">Quiz & Video</a></li> <!-- Link to the quiz and video page. -->
+         </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main id="main-content"> <!-- Main content of the page. -->
+
+      <section class="hero"> <!-- First highlight section of the page. -->
+        <div class="container hero-layout"> <!-- Container that organizes the main text and image. -->
+
+          <div class="hero-text"> <!-- Main text area. -->
+            <p class="section-label">WELCOME</p> <!-- Small label above the title. -->
+            <h2>A simple guide to our galaxy</h2> <!-- Main section title. -->
+            <p>
+              Big Planetarium in Bristol is an educational space where children, families, schools and
+              curious visitors can learn about space in a way that feels welcoming, exciting and easy to
+              understand.
+            </p> <!-- First paragraph explaining the purpose of the planetarium. -->
+            <p>
+              The Milky Way is the galaxy that contains our Solar System. It includes stars, planets,
+              moons, gas, dust and many other fascinating objects moving through space.
+            </p> <!-- Second paragraph explaining what the Milky Way is. -->
+
+            <div class="button-group"> <!-- Group of action buttons. -->
+              <a href="mars.html" class="button">Discover Mars</a> <!-- Button that leads to the Mars page. -->
+              <a href="visit.html" class="button button-outline">Go to the quiz</a> <!-- Button that leads to the quiz page. -->
+            </div>
+          </div>
+
+          <div class="hero-visual-card"> <!-- Container for the main section image. -->
+            <img src="Planets/Planets.png" alt="Illustration of several planets in the Solar System"> <!-- Image showing several planets. -->
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- Section with different background explaining the Milky Way. -->
+        <div class="container"> <!-- Container that centers the content. -->
+          <p class="section-label">OVERVIEW</p> <!-- Small section label. -->
+          <h2 class="section-heading">What is the Milky Way?</h2> <!-- Section title. -->
+          <div class="two-column"> <!-- Two-column layout. -->
+
+            <div class="text-panel"> <!-- Left column with text. -->
+              <p>
+                The Milky Way is a huge galaxy. A galaxy is a giant collection of stars,
+                gas, dust and planetary systems held together by gravity.
+              </p> <!-- Explains what a galaxy is. -->
+
+              <p>
+                Our Sun is one of the stars inside the Milky Way. The planets in our Solar System,
+                including Earth and Mars, orbit the Sun.
+              </p> <!-- Explains the relationship between the Sun and planets. -->
+
+              <p>
+                Learning about the Milky Way helps us understand where we are in the universe
+                and how planets can be very different from one another.
+              </p> <!-- Explains why studying the Milky Way is important. -->
+            </div>
+
+            <aside class="info-panel"> <!-- Right column with quick information. -->
+              <h3>Quick space facts</h3> <!-- Title of the side block. -->
+              <ul class="styled-list"> <!-- List with quick facts. -->
+                <li>The Milky Way contains billions of stars.</li> <!-- Fact 1 -->
+                <li>Earth is part of the Solar System.</li> <!-- Fact 2 -->
+                <li>Mars is often called the Red Planet.</li> <!-- Fact 3 -->
+                <li>Saturn is famous for its rings.</li> <!-- Fact 4 -->
+              </ul>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section"> <!-- Section with highlighted space objects. -->
+        <div class="container"> <!-- Container that centers the content. -->
+          <p class="section-label">FEATURED</p> <!-- Small section label. -->
+          <h2 class="section-heading">Featured objects in space</h2> <!-- Section title. -->
+          <div class="card-grid"> <!-- Grid with 3 cards. -->
+
+            <div class="feature-card"> <!-- Sun card. -->
+              <div class="feature-image-box"> <!-- Image container. -->
+                <img src="Planets/Sun.png" alt="The Sun"> <!-- Sun image. -->
+              </div>
+              <h3>The Sun</h3> <!-- Object name. -->
+              <p>The Sun is the star at the centre of our Solar System. It provides light and heat.</p> <!-- Description of the Sun. -->
+              <a href="planets.html" class="button small-button">Sun Facts</a> <!-- Button leading to Sun facts page in progress. -->
+            </div>
+
+            <div class="feature-card"> <!-- Moon card. -->
+              <div class="feature-image-box"> <!-- Image container. -->
+                <img src="Planets/Moon.png" alt="The Moon"> <!-- Moon image. -->
+              </div>
+              <h3>Moon</h3> <!-- Object name -->
+              <p>The Moon is Earth's natural satellite. It affects tides and goes through different phases.</p> <!-- Description of the Moon. -->
+              <a href="moon.html" class="button small-button">Moon Facts</a> <!-- Button leading to Moon page. -->
+            </div>
+
+            <div class="feature-card"> <!-- Asteroid card -->
+              <div class="feature-image-box"> <!-- Image container. -->
+               <img src="Planets/Asteroid.png" alt="Asteroid in space"> <!-- Asteroid image. -->
+              </div>
+              <h3>Asteroid</h3> <!-- Object name. -->
+             <p>Asteroids are small rocky objects that orbit the Sun, mostly found in the asteroid belt.</p> <!-- Description of asteroids. -->
+             <a href="planets.html" class="button small-button">Asteroids Facts</a> <!-- Button leading to asteroid facts page in progress. -->
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- Planet gallery section. -->
+
+        <div class="container"> <!-- Container that centers the content. -->
+          <p class="section-label">GALLERY</p> <!-- Small section label. -->
+          <h2 class="section-heading">Planet gallery</h2> <!-- Section title. -->
+          <p class="section-intro">A visual journey through the planets of our Solar System.</p> <!-- Intro text for the gallery. -->
+
+          <div class="planet-grid"> <!-- Grid with planet cards. -->
+
+            <div class="planet-card"> <!-- Mercury card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Mercury.png" alt="Mercury"> <!-- Mercury image. -->
+              </div>
+              <h3>Mercury</h3> <!-- Planet name. -->
+              <a href="planets.html" class="button planet-button">Mercury Facts</a> <!-- Button for Mercury page in progress. -->
+            </div>
+
+            <div class="planet-card"> <!-- Venus card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Venus.png" alt="Venus"> <!-- Venus image. -->
+              </div>
+              <h3>Venus</h3> <!-- Planet name. -->
+              <a href="planets.html" class="button planet-button">Venus Facts</a> <!-- Button for Venus page in progress. -->
+            </div>
+
+            <div class="planet-card"> <!-- Earth card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Earth.png" alt="Earth"> <!-- Earth image. -->
+              </div>
+              <h3>Earth</h3> <!-- Planet name -->
+              <a href="planets.html" class="button planet-button">Earth Facts</a> <!-- Button for Earth page in progress. -->
+            </div>
+
+            <div class="planet-card"> <!-- Mars card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Mars.png" alt="Mars"> <!-- Mars image. -->
+              </div>
+              <h3>Mars</h3> <!-- Planet name -->
+              <a href="mars.html" class="button planet-button">Mars Facts</a> <!-- Button for Mars page. -->
+            </div>
+
+            <div class="planet-card"> <!-- Jupiter card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Jupiter.png" alt="Jupiter"> <!-- Jupiter image. -->
+              </div>
+              <h3>Jupiter</h3> <!-- Planet name -->
+              <a href="planets.html" class="button planet-button">Jupiter Facts</a> <!-- Button for Jupiter page in progress. -->
+            </div>
+
+            <div class="planet-card"> <!-- Saturn card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Saturn.png" alt="Saturn"> <!-- Saturn image. -->
+              </div>
+              <h3>Saturn</h3> <!-- Planet name -->
+              <a href="planets.html" class="button planet-button">Saturn Facts</a> <!-- Button for Saturn page in progress. -->
+            </div>
+
+            <div class="planet-card"> <!-- Uranus card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Uranus.png" alt="Uranus"> <!-- Uranus image. -->
+              </div>
+              <h3>Uranus</h3> <!-- Planet name -->
+              <a href="planets.html" class="button planet-button">Uranus Facts</a> <!-- Button for Uranus page in progress. -->
+            </div>
+
+            <div class="planet-card"> <!-- Neptune card. -->
+              <div class="planet-image-box">
+                <img src="Planets/Neptune.png" alt="Neptune"> <!-- Neptune image. -->
+              </div>
+              <h3>Neptune</h3> <!-- Planet name -->
+              <a href="planets.html" class="button planet-button">Neptune Facts</a> <!-- Button for Neptune page in progress. -->
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section"> <!-- Final section inviting the user to interact with the quiz. -->
+        <div class="container"> <!-- Container that centers the content. -->
+
+          <div class="cta-box"> <!-- Highlighted call-to-action box. -->
+            <div>
+              <p class="section-label">INTERACTIVE LEARNING</p> <!-- Small section label. -->
+              <h2>Ready to test your space knowledge?</h2> <!-- Call-to-action title. -->
+              <p>Visit our interactive page to watch a short video and complete the full six-question quiz.</p> <!-- Text inviting the user to take the quiz. -->
+            </div>
+
+            <div>
+              <a href="visit.html" class="button">Start the quiz</a> <!-- Button that leads to the quiz page. -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer"> <!-- Page footer. -->
+      <div class="container"> <!-- Container that centers the footer content. -->
+        <p>&copy; 2026 Big Planetarium.</p> <!-- Copyright text. -->
+      </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Links the JavaScript file. -->
+  </body>
+</html>

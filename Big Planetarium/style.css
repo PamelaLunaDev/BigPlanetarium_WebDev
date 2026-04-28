@@ -1,0 +1,700 @@
+/* Basic reset. Title of this part, here we start by clearing the browser's automatic styles. */
+* { /* The asterisk selects all elements on the page. */
+  box-sizing: border-box; /* Makes width and height include padding and border, helping control box sizes better. */
+  margin: 0; /* Removes the automatic margins added by the browser. */
+  padding: 0; /* Removes the automatic internal spacing. */
+}
+
+/* Page defaults */ /* General styles for the entire page. */
+body { /* body is the main visible area of the site. */
+  font-family: Arial, Helvetica, sans-serif; /* Defines the text font. */
+  line-height: 1.7; /* Increases the space between lines to make reading easier. */
+  background-color: #272727; /* Defines the general background color of the page. */
+  color: #f5f5f5; /* Defines the default text color. */
+}
+
+img { /* Rules for all images. */
+  display: block; /* Makes the image behave like a block, avoiding strange spaces. */
+  max-width: 100%; /* Prevents the image from going beyond the size of its container. */
+  height: auto; /* Keeps the image's original proportion. */
+}
+
+.container { /* Class used to center and limit width. */
+  width: min(92%, 1180px); /* The width will be 92% of the screen, but never larger than 1180px. */
+  margin: 0 auto; /* Centers horizontally. */
+}
+
+/* Skip link */ /* Hidden link that helps accessibility. */
+.skip-link { /* Class for the link that jumps directly to the main content. */
+  position: absolute; /* Removes the link from the normal flow so it can be hidden. */
+  left: 1rem; /* Adds a small space from the left. */
+  top: -100px; /* Hides the link above the screen. */
+  background: #ffffff; /* White background so it is visible when it appears. */
+  color: #000000; /* Black text for contrast. */
+  padding: 0.8rem 1rem; /* Internal spacing to make it look like a button. */
+  border-radius: 0.5rem; /* Rounded corners. */
+  text-decoration: none; /* Removes the default underline from the link. */
+  z-index: 1000; /* Ensures it stays above other elements. */
+}
+
+.skip-link:focus { /* When someone uses the keyboard and selects this link. */
+  top: 1rem; /* The link appears on screen. */
+}
+
+/* Focus - Focus style for accessibility. */
+a:focus,
+button:focus,
+input:focus { /* When a link, button or input receives keyboard focus. */
+  outline: 3px solid #ffffff; /* Draws a white outline around it. */
+  outline-offset: 3px; /* Moves the outline slightly away from the element. */
+}
+
+/* Header */ /* Top area of the site. */
+.site-header { /* Main header. */
+  background-color: #111111; /* Dark background. */
+  border-bottom: 1px solid #2f2f2f; /* Thin line underneath to separate it from the rest. */
+  padding: 1.5rem 0; /* Spacing at the top and bottom. */
+}
+
+.header-layout,
+.site-header .container { /* Internal header organization, also covers pages that only use .container in the header. */
+  display: grid; /* Uses grid to organize the elements better. */
+  gap: 1.5rem; /* Space between grid items. */
+}
+
+.eyebrow,
+.section-label { /* Shared style between small labels. */
+  font-size: 0.85rem; /* Smaller text. */
+  letter-spacing: 0.12em; /* Increases spacing between letters. */
+  text-transform: uppercase; /* Makes everything uppercase. */
+  color: #b8b8b8; /* Light grey color. */
+  margin-bottom: 0.5rem; /* Space below. */
+}
+
+.branding h1 { /* Main title inside the branding area. */
+  font-size: 2.2rem; /* Large size. */
+  margin-bottom: 0.3rem; /* Space below the title. */
+}
+
+.tagline { /* Short sentence below the title. */
+  color: #d4d4d4; /* Softer color. */
+  max-width: 45rem; /* Limits the width so it does not become too long. */
+}
+
+/* Navigation */ /* Menu style. */
+.nav-list { /* List that contains menu items. */
+  list-style: none; /* Removes list bullets. */
+  display: flex; /* Places items side by side. */
+  flex-wrap: wrap; /* Allows items to wrap if they do not fit. */
+  gap: 0.8rem; /* Space between items. */
+}
+
+.nav-list a { /* Style for menu links. */
+  text-decoration: none; /* Removes underline. */
+  color: #ffffff; /* White text. */
+  background-color: #1d1d1d; /* Dark background. */
+  border: 1px solid #3a3a3a; /* Thin border. */
+  padding: 0.75rem 1rem; /* Internal spacing. */
+  border-radius: 999px; /* Makes the button very rounded. */
+  font-weight: 700; /* Bold text. */
+  display: inline-block; /* Makes the link behave like a button. */
+}
+
+.nav-list a:hover,
+.nav-list a:focus { /* When hovering with the mouse or selecting with keyboard. */
+  background-color: #2b2b2b; /* Background becomes slightly lighter. */
+}
+
+.nav-list a[aria-current="page"] { /* Link of the current page. */
+  background-color: #ffffff; /* White background. */
+  color: #111111; /* Dark text. */
+  border-color: #ffffff; /* White border. */
+}
+
+/* Sections */ /* Default spacing for sections. */
+.hero,
+.content-section,
+.page-banner { /* These three areas use the same vertical spacing. */
+  padding: 4rem 0; /* Space at the top and bottom. */
+}
+
+.content-section-soft,
+.page-banner,
+.alt-section { /* Sections with alternative background. */
+  background-color: #121212; /* Slightly different background to visually separate the area. */
+}
+
+.section-heading { /* Section title. */
+  margin-bottom: 1.4rem; /* Space below the title. */
+}
+
+.section-intro { /* Short introductory text. */
+  margin-bottom: 1.5rem; /* Space below. */
+  max-width: 50rem; /* Limits the width to improve readability. */
+}
+
+/* Layouts - Grid structures. */
+.hero-layout,
+.two-column,
+.feature-layout,
+.comparison-layout,
+.page-banner-layout,
+.cta-box { /* All these blocks use grid. */
+  display: grid; /* Activates grid. */
+  gap: 2rem; /* Space between columns or rows. */
+}
+
+.hero-layout,
+.page-banner-layout { /* Main highlight layouts. */
+  grid-template-columns: 1.15fr 0.85fr; /* Splits into two columns, with the left one larger. */
+  align-items: center; /* Vertically aligns items to the center. */
+}
+
+.two-column,
+.feature-layout,
+.comparison-layout,
+.cta-box { /* Layouts with two equal columns. */
+  grid-template-columns: 1fr 1fr; /* Two columns of the same size. */
+  align-items: start; /* Aligns items to the top. */
+}
+
+.hero-text h2,
+.page-banner h2,
+.content-section h2 { /* Large section titles. */
+  font-size: 2.2rem; /* Large size. */
+  line-height: 1.2; /* More compact line height. */
+  margin-bottom: 1rem; /* Space below. */
+}
+
+.hero-text p,
+.page-banner p,
+.content-section p { /* Paragraphs inside these areas. */
+  margin-bottom: 1rem; /* Space below each paragraph. */
+}
+
+/* Panels and cards - Visual cards and boxes. */
+.hero-visual-card,
+.text-panel,
+.info-panel,
+.feature-card,
+.planet-card,
+.fact-card,
+.interactive-panel,
+.comparison-figure,
+.quiz-form,
+.quiz-question { /* All these elements share the same visual style. */
+  background: linear-gradient(180deg, #1a1a1a 0%, #131313 100%); /* Dark gradient background. */
+  border: 1px solid #ffffff; /* White border. */
+  border-radius: 1.25rem; /* Rounded corners. */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28); /* Shadow to add depth. */
+}
+
+.hero-visual-card,
+.text-panel,
+.info-panel,
+.feature-card,
+.planet-card,
+.fact-card,
+.interactive-panel,
+.comparison-figure,
+.quiz-form,
+.quiz-question { /* Same group of elements. */
+  padding: 1.5rem; /* Internal spacing. */
+}
+
+.hero-visual-card img { /* Main image inside the visual card. */
+  width: 100%; /* Uses all available width inside the box. */
+  border-radius: 1rem; /* Rounded corners on the image. */
+}
+
+.info-panel h3,
+.feature-card h3,
+.planet-card h3,
+.fact-card h3,
+.interactive-panel h2 { /* Titles inside cards. */
+  margin-bottom: 0.75rem; /* Space below the title. */
+}
+
+/* Lists */ /* Lists. */
+.styled-list { /* Styled list. */
+  padding-left: 1.2rem; /* Adds left space for markers and indentation. */
+}
+
+.styled-list li { /* Each list item. */
+  margin-bottom: 0.6rem; /* Space below each item. */
+}
+
+/* Grids - Card grids. */
+.card-grid,
+.planet-grid,
+.fact-grid { /* Three different grids. */
+  display: grid; /* Uses grid to organize cards. */
+  gap: 1.4rem; /* Space between cards. */
+}
+
+.card-grid { /* Grid for main cards. */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns. */
+}
+
+.planet-grid { /* Planet grid. */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns. */
+}
+
+.fact-grid { /* Fact grid. */
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns. */
+}
+
+/* Feature cards */ /* Highlight cards. */
+.feature-card { /* Each highlighted card. */
+  display: flex; /* Uses flexbox. */
+  flex-direction: column; /* Stacks elements vertically. */
+  height: 100%; /* Makes all cards try to occupy the same height. */
+}
+
+.feature-image-box { /* Card image container. */
+  background-color: #000000; /* Black background. */
+  border: 1px solid #ffffff; /* White border. */
+  border-radius: 1rem; /* Rounded corners. */
+  padding: 1rem; /* Internal spacing. */
+  margin-bottom: 1rem; /* Space below the image. */
+}
+
+.feature-image-box img { /* Image inside the box. */
+  width: 160px; /* Defines fixed image size. */
+  margin: 0 auto; /* Centers horizontally. */
+}
+
+/* Planet cards */ /* Planet gallery cards. */
+.planet-card { /* Each planet card. */
+  display: flex; /* Uses flexbox. */
+  flex-direction: column; /* Organizes from top to bottom. */
+  text-align: center; /* Centers the text. */
+  align-items: center; /* Centers items horizontally. */
+  gap: 0.75rem; /* Space between items. */
+  transition: transform 0.25s ease, box-shadow 0.25s ease; /* Smooth animation on hover. */
+}
+
+.planet-card:hover { /* When hovering over the card. */
+  transform: translateY(-5px); /* Moves the card up slightly. */
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.35); /* Increases the shadow. */
+}
+
+.planet-image-box { /* Internal image box for the planet. */
+  width: 100%; /* Takes the full width of the card. */
+  background-color: #000000; /* Black background. */
+  border: 1px solid #ffffff; /* White border. */
+  border-radius: 1rem; /* Rounded corners. */
+  padding: 1rem; /* Internal spacing. */
+}
+
+.planet-image-box img { /* Planet image. */
+  width: 140px; /* Defines the size. */
+  margin: 0 auto; /* Centers it. */
+}
+
+.planet-button { /* Button inside planet cards. */
+  margin-top: auto; /* Pushes the button down, helping all cards align. */
+}
+
+/* Links */ /* Text links. */
+.text-link { /* Simple links inside text. */
+  color: #ffffff; /* White color. */
+  font-weight: 700; /* Bold. */
+}
+
+/* Buttons */ /* Buttons. */
+.button-group,
+.quiz-actions,
+.coming-soon-actions { /* Button group. */
+  display: flex; /* Organizes side by side. */
+  flex-wrap: wrap; /* Wraps if needed. */
+  gap: 0.9rem; /* Space between buttons */
+  margin-top: 1rem; /* Space above. */
+}
+
+.button { /* Default button style. */
+  display: inline-block; /* Makes the link look like a button. */
+  border: 1px solid #ffffff; /* White border. */
+  cursor: pointer; /* Click cursor. */
+  background-color: #ffffff; /* White background. */
+  color: #111111; /* Dark text. */
+  padding: 0.9rem 1.2rem; /* Internal spacing. */
+  border-radius: 999px; /* Very rounded button. */
+  text-decoration: none; /* Removes underline. */
+  font-weight: 700; /* Bold. */
+  font-size: 1rem; /* Text size. */
+}
+
+.button:hover,
+.button:focus { /* When hovering or focusing with keyboard. */
+  background-color: #dddddd; /* Slightly darker background. */
+}
+
+.button-outline { /* Outlined button style. */
+  background-color: transparent; /* No filled background. */
+  color: #ffffff; /* White text. */
+  border: 1px solid #5a5a5a; /* Grey border. */
+}
+
+.button-outline:hover,
+.button-outline:focus { /* Interaction for outlined button. */
+  background-color: #262626; /* Adds dark background on hover. */
+}
+
+.small-button { /* Smaller button used in cards. */
+  margin-top: 1rem; /* Space above. */
+  align-self: flex-start; /* Aligns the button to the left inside flex. */
+}
+
+/* Banner images */ /* Style for main images on internal pages. */
+.banner-planet { /* Main image box. */
+  background-color: #000000; /* Black background. */
+  border: 1px solid #ffffff; /* White border. */
+  padding: 1rem; /* Internal spacing. */
+  border-radius: 1rem; /* Rounded corners. */
+}
+
+.banner-planet img { /* Main image. */
+  width: 100%; /* Uses all available width. */
+  max-width: 260px; /* Does not go beyond 260px. */
+  margin: 0 auto; /* Centers it. */
+}
+
+/* Table */ /* Comparison table. */
+.comparison-table-wrapper { /* Table box. */
+  overflow-x: auto; /* Allows horizontal scrolling if the table does not fit. */
+}
+
+.comparison-table { /* The table itself. */
+  width: 100%; /* Uses full width. */
+  border-collapse: collapse; /* Joins table borders. */
+  background-color: #141414; /* Dark background. */
+  border-radius: 1rem; /* Rounded corners. */
+  overflow: hidden; /* Hides overflow to keep borders clean. */
+}
+
+.comparison-table caption { /* Table title. */
+  text-align: left; /* Aligns left. */
+  font-weight: 700; /* Bold. */
+  margin-bottom: 0.75rem; /* Space below. */
+}
+
+.comparison-table th,
+.comparison-table td { /* Header and content cells. */
+  border: 1px solid #343434; /* Table lines. */
+  padding: 0.9rem; /* Internal spacing. */
+  text-align: left; /* Text aligned left. */
+}
+
+.comparison-table thead { /* Table header row area. */
+  background-color: #1f1f1f; /* Slightly different background. */
+}
+
+/* Figure */ /* Figure with caption. */
+.comparison-figure img { /* Figure image. */
+  border-radius: 1rem; /* Rounded corners. */
+  margin-bottom: 1rem; /* Space below. */
+}
+
+.comparison-figure figcaption { /* Caption text. */
+  color: #d7d7d7; /* Softer color. */
+}
+
+/* Video. */
+.video-wrapper { /* Box that holds the video. */
+  position: relative; /* Base for positioning the iframe inside. */
+  width: 100%; /* Full width. */
+  padding-top: 56.25%; /* Keeps 16:9 video ratio. */
+  overflow: hidden; /* Hides overflow. */
+  border-radius: 1rem; /* Rounded corners. */
+  margin-top: 1rem; /* Space above. */
+  border: 1px solid #2d2d2d; /* Border. */
+}
+
+.video-wrapper iframe { /* YouTube video. */
+  position: absolute; /* Fits inside the box. */
+  inset: 0; /* Sticks to all sides of the box. */
+  width: 100%; /* Uses full width. */
+  height: 100%; /* Uses full height. */
+  border: 0; /* Removes default border. */
+}
+
+/* Quiz */ /* Quiz part. */
+.quiz-form { /* Form box. */
+  margin-top: 1rem; /* Space above. */
+}
+
+.quiz-question { /* Each quiz question. */
+  margin-bottom: 1rem; /* Space below. */
+}
+
+.quiz-question fieldset { /* Group of answers for the question. */
+  border: 1px solid #444444; /* Border. */
+  border-radius: 0.9rem; /* Rounded corners. */
+  padding: 1rem; /* Internal spacing. */
+}
+
+.quiz-question legend { /* Question title. */
+  font-weight: 700; /* Bold. */
+  padding: 0 0.4rem; /* Small side spacing. */
+}
+
+.quiz-option { /* Each answer option. */
+  margin-bottom: 0.7rem; /* Space below. */
+  padding: 0.35rem; /* Internal spacing. */
+  border-radius: 0.7rem; /* Rounded corners. */
+}
+
+.quiz-option label { /* Text beside the answer circle. */
+  margin-left: 0.5rem; /* Space between circle and text. */
+}
+
+.quiz-result { /* Area where final result appears. */
+  margin-top: 1.2rem; /* Space above. */
+  font-weight: 700; /* Bold. */
+  min-height: 2rem; /* Reserves space even before the result appears. */
+}
+
+.answer-review { /* Box that shows corrections. */
+  margin-top: 1.2rem; /* Space above. */
+  background-color: #1a1a1a; /* Dark background. */
+  padding: 1rem; /* Internal spacing. */
+  border-radius: 1rem; /* Rounded corners. */
+  border: 1px solid #343434; /* Border. */
+}
+
+.answer-review h3 { /* Title of the answer box. */
+  margin-bottom: 0.8rem; /* Space below. */
+}
+
+.answer-review ul { /* Review list. */
+  padding-left: 1.2rem; /* List indentation. */
+}
+
+.answer-review li { /* Each review item. */
+  margin-bottom: 1rem; /* Space below. */
+}
+
+.correct-answer { /* Style applied when the answer is correct. */
+  background-color: #00d061; /* Green background. */
+  border: 1px solid #025e0e; /* Dark green border. */
+}
+
+.wrong-answer { /* Style applied when the answer is wrong. */
+  background-color: #ed3b3b; /* Red background. */
+  border: 1px solid #ef5b5b; /* Red border. */
+}
+
+button:disabled { /* Disabled button. */
+  opacity: 0.7; /* Makes it more faded. */
+  cursor: not-allowed; /* Cursor shows it cannot be clicked. */
+}
+
+/* CTA */ /* Final call-to-action box. */
+.cta-box { /* Highlighted area to invite the user to act. */
+  background: linear-gradient(180deg, #171717 0%, #111111 100%); /* Gradient background. */
+  border: 1px solid #2d2d2d; /* Border. */
+  border-radius: 1.25rem; /* Rounded corners. */
+  padding: 2rem; /* Internal spacing. */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28); /* Shadow. */
+}
+
+/* Footer */ /* Footer. */
+.site-footer { /* Footer area. */
+  background-color: #111111; /* Dark background. */
+  border-top: 1px solid #2f2f2f; /* Line on top. */
+  padding: 1.5rem 0; /* Vertical spacing. */
+  text-align: center; /* Centers text. */
+  color: #d7d7d7; /* Text color. */
+}
+
+/* Coming soon page */ /* Coming soon page. */
+.coming-soon-page { /* Area that takes almost the full screen. */
+  min-height: 100vh; /* Minimum height equal to the screen height. */
+  display: flex; /* Uses flexbox. */
+  align-items: center; /* Centers vertically. */
+  justify-content: center; /* Centers horizontally. */
+  background-color: #0a0a0a; /* Dark background. */
+  padding: 2rem; /* Internal spacing. */
+}
+
+.coming-soon-card { /* Central box of the coming soon page. */
+  width: min(90%, 720px); /* Responsive width, maximum 720px. */
+  text-align: center; /* Centered text. */
+  background: linear-gradient(180deg, #1a1a1a 0%, #131313 100%); /* Gradient background. */
+  border: 1px solid #ffffff; /* White border. */
+  border-radius: 1.25rem; /* Rounded corners. */
+  padding: 2.5rem; /* Internal spacing. */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28); /* Shadow. */
+  display: flex; /* Flexbox. */
+  flex-direction: column; /* Stacked elements. */
+  align-items: center; /* Everything centered. */
+}
+
+.coming-soon-card h1 { /* Coming soon page title. */
+  font-size: 2.2rem; /* Large size. */
+  margin-bottom: 1rem; /* Space below. */
+}
+
+.coming-soon-card p { /* Coming soon page text. */
+  margin-bottom: 0.8rem; /* Space below. */
+  max-width: 400px; /* Limits width for comfortable reading. */
+}
+
+.coming-soon-card img { /* Coming soon page image. */
+  width: 100%; /* Uses available width. */
+  max-width: 420px; /* Maximum limit. */
+  margin: 1.5rem 0; /* Space above and below. */
+  border-radius: 1rem; /* Rounded corners. */
+}
+
+.coming-soon-actions { /* Button area on the coming soon page. */
+  justify-content: center; /* Centers the buttons. */
+}
+
+/* Dropdown */ /* Dropdown menu. */
+.dropdown { /* Main item that contains submenu. */
+  position: relative; /* Base for positioning the submenu. */
+}
+
+.dropdown-menu { /* Hidden submenu. */
+  display: none; /* Starts hidden. */
+  position: absolute; /* Stays above the normal layout. */
+  top: 100%; /* Appears right below the main item. */
+  left: 0; /* Aligns with the left of the main item. */
+  background: #111; /* Dark background. */
+  border: 1px solid #444; /* Border. */
+  border-radius: 8px; /* Rounded corners. */
+  padding: 10px 0; /* Internal vertical spacing. */
+  min-width: 180px; /* Minimum width. */
+  z-index: 1000; /* Stays above other elements. */
+}
+
+.dropdown-menu li { /* Submenu list items. */
+  list-style: none; /* Removes bullets. */
+}
+
+.dropdown-menu a { /* Submenu links. */
+  display: block; /* Makes each link take full width. */
+  padding: 10px 15px; /* Internal spacing. */
+  color: #fff; /* White text. */
+  text-decoration: none; /* Removes underline. */
+}
+
+.dropdown-menu a:hover { /* When hovering over submenu. */
+  background: #222; /* Background changes to show interaction. */
+}
+
+.dropdown:hover .dropdown-menu { /* When hovering over the main item. */
+  display: block; /* Shows the submenu. */
+}
+
+/* Responsive */ /* Rules to adapt the site to smaller screens. */
+@media (max-width: 980px) { /* When the screen is up to 980px. */
+  .card-grid { /* Main card grid. */
+    grid-template-columns: repeat(2, 1fr); /* Changes from 3 to 2 columns. */
+  }
+
+  .planet-grid { /* Planet grid. */
+    grid-template-columns: repeat(3, 1fr); /* Changes from 4 to 3 columns. */
+  }
+}
+
+@media (max-width: 768px) { /* When the screen is up to 768px. */
+  .hero-layout,
+  .two-column,
+  .feature-layout,
+  .comparison-layout,
+  .page-banner-layout,
+  .cta-box,
+  .card-grid,
+  .planet-grid,
+  .fact-grid { /* All these layouts change. */
+    grid-template-columns: 1fr; /* Everything becomes one column. */
+  }
+
+  .branding h1 { /* Main site title. */
+    font-size: 1.8rem; /* Reduces size on mobile. */
+  }
+
+  .hero-text h2,
+  .page-banner h2,
+  .content-section h2 { /* Large titles. */
+    font-size: 1.7rem; /* Become smaller on small screens. */
+  }
+
+  .nav-list { /* Menu */
+    flex-direction: column; /* Links go one under another. */
+  }
+
+  .button-group,
+  .quiz-actions,
+  .coming-soon-actions { /* Button group. */
+    flex-direction: column; /* Buttons go one under another. */
+    align-items: flex-start; /* Aligns left. */
+  }
+
+  .feature-image-box img,
+  .planet-image-box img {
+    width: 120px; /* Reduces size on mobile. */
+  }
+
+  .banner-planet img {
+    max-width: 220px; /* Slightly reduces the main image on smaller screens. */
+  }
+}
+
+/* Memory game */ /* Section responsible for the layout and styling of the memory game. */
+.memory-game { /* Area that contains all the game cards. */
+  display: grid; /* Uses grid to organise the cards. */
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns. */
+  gap: 1rem; /* Space between the cards. */
+  margin-top: 1.5rem; /* Space above the game. */
+}
+
+.memory-card { /* Each individual card in the game. */
+  background: linear-gradient(180deg, #1a1a1a 0%, #131313 100%); /* Dark gradient background. */
+  border: 1px solid #ffffff; /* White border. */
+  border-radius: 1rem; /* Rounded corners. */
+  padding: 0.8rem; /* Inner spacing. */
+  cursor: pointer; /* Shows that the card is clickable. */
+  min-height: 160px; /* Minimum height of the card. */
+  display: flex; /* Uses flexbox to center content. */
+  align-items: center; /* Vertical centering. */
+  justify-content: center; /* Horizontal centering. */
+}
+
+.memory-card img { /* Image inside the card. */
+  width: 100%; /* Takes full available width. */
+  max-width: 120px; /* Limits maximum size. */
+  border-radius: 0.7rem; /* Rounded corners. */
+}
+
+.memory-card .card-front { /* Front side of the card where the image is. */
+  display: none; /* Hidden by default. */
+}
+
+.memory-card .card-back { /* Back side of the card with the ? symbol. */
+  font-size: 2rem; /* Large text. */
+  font-weight: 700; /* Bold */
+}
+
+.memory-card.flipped .card-front,
+.memory-card.matched .card-front { /* When the card is flipped or matched. */
+  display: block; /* Shows the image. */
+}
+
+.memory-card.flipped .card-back,
+.memory-card.matched .card-back { /* When the card is flipped or matched. */
+  display: none; /* Hides the ? */
+}
+
+.memory-card.matched { /* When a correct pair is found. */
+  border-color: #00d061; /* Green border to indicate success. */
+}
+
+@media (max-width: 768px) { /* Adjustments for smaller screens. */
+  .memory-game { /* Game area. */
+    grid-template-columns: repeat(2, 1fr); /* Changes to 2 columns on mobile. */
+  }
+}

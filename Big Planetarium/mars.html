@@ -1,0 +1,201 @@
+<!DOCTYPE html> <!-- Tells the browser that this file uses HTML5. -->
+<html lang="en"> <!-- Start of the HTML document, with main language set to English. -->
+  <head> <!-- Page settings section, not directly visible in the content. -->
+    <meta charset="UTF-8"> <!-- Defines character encoding to correctly display accents and symbols. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page adapt better to mobile and tablets. -->
+    <title>Big Planetarium | Mars</title> <!-- Title shown in the browser tab. -->
+    <link rel="stylesheet" href="style.css"> <!-- Connects the CSS file to style the page. -->
+  </head>
+
+  <body> <!-- Start of the visible page content. -->
+
+    <a class="skip-link" href="#main-content">Skip to main content</a> <!-- Accessibility link to skip directly to the main content. -->
+
+    <header class="site-header"> <!-- Main site header. -->
+      <div class="container header-layout"> <!-- Container that organizes the header content. -->
+
+        <div class="branding"> <!-- Area with site name and identity. -->
+          <p class="eyebrow">BIG PLANETARIUM</p> <!-- Small text above the main title. -->
+          <h1>Mars</h1> <!-- Main page title. -->
+          <p class="tagline">Accessible space learning for everyone.</p> <!-- Short sentence explaining the page purpose. -->
+        </div>
+
+        <nav aria-label="Main navigation"> <!-- Main navigation menu. -->
+          <ul class="nav-list"> <!-- List of menu links. -->
+            <li><a href="index.html">Home</a></li> <!-- Link to the home page. -->
+            <li><a href="mars.html" aria-current="page">Mars</a></li> <!-- Link to Mars page, marked as current. -->
+            <li><a href="moon.html">Moon</a></li> <!-- Link to Moon page. -->
+            <li><a href="visit.html">Quiz & Video</a></li> <!-- Link to quiz and video page. -->
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main id="main-content"> <!-- Main page content. -->
+
+      <section class="page-banner"> <!-- First highlighted section of the page. -->
+        <div class="container page-banner-layout"> <!-- Container that organizes text and main image. -->
+
+          <div> <!-- Main text area. -->
+            <h2>Meet Mars</h2> <!-- Section main title. -->
+            <p>
+              Mars is one of the most exciting planets in our Solar System. It is often called
+              the Red Planet because its surface contains iron-rich dust.
+            </p> <!-- First paragraph explaining why Mars is called the red planet. -->
+            <p>
+              Scientists study Mars because it may help us understand more about the history
+              of planets and whether conditions for life once existed there.
+            </p> <!-- Second paragraph explaining why Mars is important for science. -->
+          </div>
+
+          <div class="banner-planet"> <!-- Container for the main image of the section -->
+            <img src="Planets/Mars.png" alt="Illustration of Mars, the red planet"> <!-- Image of Mars. -->
+          </div>
+
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- Section with different background to highlight quick facts. -->
+        <div class="container"> <!-- Container that centers the content. -->
+          <h2 class="section-heading">Quick facts about Mars</h2> <!-- Section title. -->
+          <div class="fact-grid"> <!-- Grid with fact cards. -->
+
+            <article class="fact-card"> <!-- Card with fact about Mars colour. -->
+              <h3>Colour</h3> <!-- Card title -->
+              <p>Mars appears red because of rusty dust on its surface.</p> <!-- Text explaining the planet colour. -->
+            </article>
+
+            <article class="fact-card"> <!-- Card with fact about temperature. -->
+              <h3>Temperature</h3> <!-- Card title. -->
+              <p>Mars is much colder than Earth and can be extremely chilly.</p> <!-- Text explaining temperature. -->
+            </article>
+
+            <article class="fact-card"> <!-- Card with fact about moons. -->
+              <h3>Moons</h3> <!-- Card title. -->
+              <p>Mars has two small moons called Phobos and Deimos.</p> <!-- Text explaining how many moons Mars has. -->
+            </article>
+
+            <article class="fact-card"> <!-- Card with fact about landscape. -->
+              <h3>Landscape</h3> <!-- Card title. -->
+              <p>It has rocks, valleys, volcanoes and wide dusty plains.</p> <!-- Text explaining Mars surface. -->
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section"> <!-- Section with explanation and interaction. -->
+        <div class="container"> <!-- Container that centers the content. -->
+          <div class="feature-layout"> <!-- Two-column layout. -->
+
+            <article> <!-- Left column with explanatory text. -->
+              <h2>Why is Mars important?</h2> <!-- Section title. -->
+              <p>
+                Mars is important because it is one of the closest planets to Earth and one of
+                the easiest for scientists to study with robots and spacecraft.
+              </p> <!-- First paragraph explaining importance. -->
+              <p>
+                It also helps researchers think about climate, water, geology and the future of
+                space exploration.
+              </p> <!-- Second paragraph explaining what Mars teaches. -->
+              <p>
+                Although Mars is not a comfortable place for humans, it continues to inspire new
+                questions about life beyond Earth.
+              </p> <!-- Third paragraph explaining ongoing interest. -->
+            </article>
+
+            <aside class="interactive-panel" aria-labelledby="mars-fact-title"> <!-- Right column with interactive part. -->
+              <h2 id="mars-fact-title">Interactive Mars fact</h2> <!-- Interactive section title. -->
+              <p id="fact-text">Press the button to reveal a Mars fact.</p> <!-- Text that will be replaced by JavaScript. -->
+              <button id="fact-button" class="button" type="button">Show a Mars fact</button> <!-- Button that triggers random fact. -->
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section content-section-soft"> <!-- Section comparing Mars and Earth. -->
+        <div class="container"> <!-- Container that centers the content. -->
+          <h2 class="section-heading">Mars compared with Earth</h2> <!-- Section title. -->
+          <div class="comparison-layout"> <!-- Layout with image and table. -->
+
+            <figure class="comparison-figure"> <!-- Block that groups image and caption. -->
+              <img src="Planets/Earth.png" alt="Illustration of Earth"> <!-- Image of Earth. -->
+              <figcaption>While Earth is rich in life and water, Mars is dry, cold, and mostly lifeless.</figcaption> <!-- Image caption. -->
+            </figure>
+
+            <div class="comparison-table-wrapper"> <!-- Container that allows horizontal scroll if needed. -->
+              <table class="comparison-table"> <!-- Comparison table. -->
+                <caption>Simple comparison between Earth and Mars</caption> <!-- Table title. -->
+
+                <thead> <!-- Table header comparing Earth and Mars. -->
+                  <tr>
+                    <th scope="col">Feature</th> <!-- First column. -->
+                    <th scope="col">Earth</th> <!-- Second column. -->
+                    <th scope="col">Mars</th> <!-- Third column. -->
+                  </tr>
+                </thead>
+
+                <tbody> <!-- Table body with comparison data. -->
+                  <tr>
+                    <th scope="row">Colour</th> <!-- Feature name. -->
+                    <td>Blue, green and white</td> <!-- Earth data. -->
+                    <td>Red and orange</td> <!-- Mars data. -->
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Air</th> <!-- Feature name. -->
+                    <td>Breathable for humans</td> <!-- Earth data. -->
+                    <td>Very thin atmosphere</td> <!-- Mars data. -->
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Water</th> <!-- Feature name. -->
+                    <td>Abundant liquid water</td> <!-- Earth data. -->
+                    <td>Mostly ice and traces</td> <!-- Mars data. -->
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Life</th> <!-- Feature name. -->
+                    <td>Known to support life</td> <!-- Earth data. -->
+                    <td>No confirmed life today</td> <!-- Mars data. -->
+                  </tr>
+                </tbody>
+
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section"> <!-- Final section inviting the user to go to the quiz. -->
+        <div class="container"> <!-- Container that centers the content. -->
+
+          <div class="cta-box"> <!-- Highlighted call-to-action box. -->
+            <div>
+              <p class="section-label">INTERACTIVE LEARNING</p> <!-- Small section label. -->
+              <h2>Want to test what you learned?</h2> <!-- Call-to-action title. -->
+              <p>Go to the quiz page and answer questions about space.</p> <!-- Text inviting the user to take the quiz. -->
+            </div>
+
+            <div>
+              <a class="button" href="visit.html">Go to the quiz</a> <!-- Button that links to the quiz page. -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer"> <!-- Page footer. -->
+      <div class="container"> <!-- Container that centers footer content. -->
+        <p>&copy; 2026 Big Planetarium.</p> <!-- Copyright text. -->
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script> <!-- Connects the JavaScript file. -->
+  </body>
+</html>
